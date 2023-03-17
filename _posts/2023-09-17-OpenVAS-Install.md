@@ -4,7 +4,6 @@ title: OpenVas Install
 date: 2023-09-17
 classes: wide
 tags:
-    - Vulnerability Scanning
 ---
 
 Install
@@ -15,7 +14,8 @@ sudo gvm-setup
 ```
 Wait until it's done, it can take a LOT of time.
 
-# Run
+Run
+--------------
 ```bash
 sudo gvm-start
 ```
@@ -26,8 +26,10 @@ Look for targets and add them: via GUI
 nmap <subnet> -n -A
 ```
 
-# Troubleshoot
-## **Failed to find config 'daba56c8-73ec-11df-a475-002264764cea’**
+Troubleshoot
+--------------
+**Failed to find config 'daba56c8-73ec-11df-a475-002264764cea’**
+--------------
 https://www.youtube.com/watch?v=J7SrS4qDzM0
 ```bash
 sudo su -
