@@ -1,7 +1,7 @@
 ---
 layout: single
 title: OpenVas Install
-date: 2023-09-17
+date: 2023-03-17
 classes: wide
 tags:
 ---
