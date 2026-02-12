@@ -86,9 +86,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "argb10"
+  name             : "argb"
   avatar           : "/assets/images/image.png"
-  bio              : "Trying and learning stuff"
+  bio              : "Security Researcher"
   location         : "ES"
   email            : "argbinf@gmail.com"
   uri              :
@@ -96,6 +96,18 @@ author:
   github           : "argb10"
   twitter          : ""
   youtube          : ""
+
+# PaperMod-style layout (nav + profile home)
+papermod_nav:
+  - title: "~/about"
+    url: "/about/"
+  - title: "~/projects"
+    url: "/projects/"
+  - title: "~/blog"
+    url: "/blog/"
+  - title: "~/contact"
+    url: "/contact/"
+papermod_subtitle: "(Or just argb for short)"
 
 
 # Reading Files

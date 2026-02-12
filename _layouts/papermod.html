@@ -1,0 +1,113 @@
+---
+# PaperMod-style layout (inspired by pcaro.es / Hugo PaperMod)
+# Use for home and simple pages. Uses site.author and site.papermod from _config.yml
+---
+<!DOCTYPE html>
+<html lang="{{ site.locale | slice: 0,2 | default: 'en' }}" dir="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="author" content="{{ site.author.name }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/papermod.css' | relative_url }}">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+  <meta name="theme-color" content="#2e2e33">
+  <meta name="msapplication-TileColor" content="#2e2e33">
+  <link rel="alternate" type="application/rss+xml" href="{{ '/feed.xml' | relative_url }}">
+  {% if page.layout == 'papermod' and page.name == 'index.html' %}
+  <meta property="og:type" content="website">
+  {% endif %}
+</head>
+<body class="list dark" id="top">
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">
+        <a href="{{ '/' | relative_url }}" accesskey="h" title="{{ site.title }}">/home/{{ site.author.name | downcase | replace: ' ', '' }}</a>
+      </div>
+      <ul id="menu">
+        {% for item in site.papermod_nav %}
+        <li><a href="{{ item.url | relative_url }}" title="{{ item.title }}"><span>{{ item.title }}</span></a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    {% if page.profile %}
+    <div class="profile">
+      <div class="profile_inner">
+        <img draggable="false" src="{{ site.author.avatar | relative_url }}" alt="profile" height="150" width="150">
+        <h1>{{ site.author.name }}</h1>
+        {% if site.papermod_subtitle %}
+        <h6>{{ site.papermod_subtitle }}</h6>
+        {% endif %}
+        {% if site.author.bio %}
+        <h3>{{ site.author.bio }}</h3>
+        {% endif %}
+        <div class="social-icons">
+          {% if site.author.github %}
+          <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener noreferrer me" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          {% endif %}
+          {% if site.author.linkedin %}
+          <a href="https://linkedin.com/in/{{ site.author.linkedin }}/" target="_blank" rel="noopener noreferrer me" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          {% endif %}
+          {% if site.author.twitter %}
+          <a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="noopener noreferrer me" title="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          {% endif %}
+          {% if site.author.email %}
+          <a href="mailto:{{ site.author.email }}" target="_blank" rel="noopener noreferrer me" title="Email">
+            <svg viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <article class="page-content">
+      {% if page.title %}
+      <header class="page-header">
+        <h1>{{ page.title }}</h1>
+      </header>
+      {% endif %}
+      <div class="post-content">
+        {{ content }}
+      </div>
+    </article>
+    {% endif %}
+  </main>
+
+  <footer class="footer">
+    <span>&copy; {{ 'now' | date: '%Y' }} <a href="{{ '/' | relative_url }}">{{ site.author.name }}</a></span>
+  </footer>
+
+  <a href="#top" aria-label="go to top" title="Go to Top" class="top-link" id="top-link" accesskey="g">
+    <svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+  </a>
+
+  <script>
+    (function() {
+      var topLink = document.getElementById('top-link');
+      function onScroll() {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+          topLink.style.visibility = 'visible';
+          topLink.style.opacity = '1';
+        } else {
+          topLink.style.visibility = 'hidden';
+          topLink.style.opacity = '0';
+        }
+      }
+      window.addEventListener('scroll', onScroll);
+      onScroll();
+    })();
+  </script>
+</body>
+</html>
