@@ -79,7 +79,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "argb"
+  name             : "Alberto Rodriguez Garcia-Barroso"
   avatar           : "/assets/images/image.png"
   bio              : "Security Researcher"
   location         : "ES"
@@ -87,7 +87,6 @@ author:
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   github           : "argb10"
-  twitter          : ""
   youtube          : ""
 
 # PaperMod-style layout (nav + profile home)
@@ -100,7 +99,7 @@ papermod_nav:
     url: "/blog/"
   - title: "~/contact"
     url: "/contact/"
-papermod_subtitle: "(Or just argb for short)"
+papermod_subtitle: "(I know, it's a long one)"
 
 
 # Reading Files

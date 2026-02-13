@@ -138,6 +138,8 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 .footer a { color: inherit; border-bottom: 1px solid var(--secondary); }
 .footer a:hover { border-bottom-color: var(--primary); }
+.footer-quote { display: block; margin-top: 0.5em; font-size: 0.9em; opacity: 0.9; }
+.footer cite { font-style: italic; }
 
 /* Back to top */
 .top-link {
