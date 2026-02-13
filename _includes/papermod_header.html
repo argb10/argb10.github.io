@@ -1,7 +1,7 @@
 <header class="header">
   <nav class="nav">
     <div class="logo">
-      <a href="{{ '/' | relative_url }}" accesskey="h" title="{{ site.title }}">/{{ site.author.name | downcase | replace: ' ', '' }}</a>
+      <a href="{{ '/' | relative_url }}" accesskey="h" title="{{ site.title }}">/{{ site.author.name | downcase | replace: ' ', '' | replace: 'alberto rodriguez garcia-barroso', 'argb' }}</a>
     </div>
     <ul id="menu">
       {% for item in site.papermod_nav %}
