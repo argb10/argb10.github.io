@@ -79,7 +79,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Alberto Rodriguez García-Barroso"
+  name             : "argb"
   avatar           : "/assets/images/image.png"
   bio              : "Security Researcher"
   location         : "ES"
@@ -231,7 +231,7 @@ compress_html:
 # Defaults
 defaults:
   - scope:
-      path: ""
+      path: "_posts"
       type: posts
     values:
       layout: papermod_post
