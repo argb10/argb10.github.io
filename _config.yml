@@ -5,14 +5,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-# Theme Settings
-#
-# Review documentation to determine if you should use `theme` or `remote_theme`
-# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
-
-# theme                  : "minimal-mistakes-jekyll"
-remote_theme             : "mmistakes/minimal-mistakes@4.15.1"
-minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+# Site uses PaperMod-style layout only (no remote theme)
 
 # Site Settings
 locale                   : "es-ES"
@@ -86,7 +79,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "argb"
+  name             : "Alberto Rodriguez García-Barroso"
   avatar           : "/assets/images/image.png"
   bio              : "Security Researcher"
   location         : "ES"
@@ -237,16 +230,10 @@ compress_html:
 
 # Defaults
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: false
-      share: false
-      related: true
+      layout: papermod_post
 
 future: true

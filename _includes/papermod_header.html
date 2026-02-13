@@ -1,0 +1,12 @@
+<header class="header">
+  <nav class="nav">
+    <div class="logo">
+      <a href="{{ '/' | relative_url }}" accesskey="h" title="{{ site.title }}">/{{ site.author.name | downcase | replace: ' ', '' }}</a>
+    </div>
+    <ul id="menu">
+      {% for item in site.papermod_nav %}
+      <li><a href="{{ item.url | relative_url }}" title="{{ item.title }}"><span>{{ item.title }}</span></a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

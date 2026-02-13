@@ -1,39 +1,13 @@
 ---
-# PaperMod-style layout (inspired by pcaro.es / Hugo PaperMod)
-# Use for home and simple pages. Uses site.author and site.papermod from _config.yml
+# PaperMod-style layout for home and pages
 ---
 <!DOCTYPE html>
 <html lang="{{ site.locale | slice: 0,2 | default: 'en' }}" dir="auto">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="robots" content="index, follow">
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="author" content="{{ site.author.name }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/papermod.css' | relative_url }}">
-  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
-  <meta name="theme-color" content="#2e2e33">
-  <meta name="msapplication-TileColor" content="#2e2e33">
-  <link rel="alternate" type="application/rss+xml" href="{{ '/feed.xml' | relative_url }}">
-  {% if page.layout == 'papermod' and page.name == 'index.html' %}
-  <meta property="og:type" content="website">
-  {% endif %}
+  {% include papermod_head.html %}
 </head>
 <body class="list dark" id="top">
-  <header class="header">
-    <nav class="nav">
-      <div class="logo">
-        <a href="{{ '/' | relative_url }}" accesskey="h" title="{{ site.title }}">/home/{{ site.author.name | downcase | replace: ' ', '' }}</a>
-      </div>
-      <ul id="menu">
-        {% for item in site.papermod_nav %}
-        <li><a href="{{ item.url | relative_url }}" title="{{ item.title }}"><span>{{ item.title }}</span></a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-  </header>
+  {% include papermod_header.html %}
 
   <main class="main">
     {% if page.profile %}
@@ -85,29 +59,6 @@
     {% endif %}
   </main>
 
-  <footer class="footer">
-    <span>&copy; {{ 'now' | date: '%Y' }} <a href="{{ '/' | relative_url }}">{{ site.author.name }}</a></span>
-  </footer>
-
-  <a href="#top" aria-label="go to top" title="Go to Top" class="top-link" id="top-link" accesskey="g">
-    <svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
-  </a>
-
-  <script>
-    (function() {
-      var topLink = document.getElementById('top-link');
-      function onScroll() {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-          topLink.style.visibility = 'visible';
-          topLink.style.opacity = '1';
-        } else {
-          topLink.style.visibility = 'hidden';
-          topLink.style.opacity = '0';
-        }
-      }
-      window.addEventListener('scroll', onScroll);
-      onScroll();
-    })();
-  </script>
+  {% include papermod_footer.html %}
 </body>
 </html>

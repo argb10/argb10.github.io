@@ -5,4 +5,18 @@ permalink: /about/
 profile: false
 ---
 
-About me. Edit this file to add your bio, experience, or whatever you want on your about page.
+About me...
+
+Why is this page here? 
+Just check my social media!
+
+Here's just nerd stuff!
+And jokes...
+
+Like this one:
+
+Two sheep walk into a—baaaa.
+
+Je Je Je
+
+Funny

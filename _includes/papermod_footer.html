@@ -1,0 +1,22 @@
+<footer class="footer">
+  <span>&copy; {{ 'now' | date: '%Y' }} <a href="{{ '/' | relative_url }}">{{ site.author.name }}</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" class="top-link" id="top-link" accesskey="g">
+  <svg viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>
+(function() {
+  var topLink = document.getElementById('top-link');
+  function onScroll() {
+    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+      topLink.style.visibility = 'visible';
+      topLink.style.opacity = '1';
+    } else {
+      topLink.style.visibility = 'hidden';
+      topLink.style.opacity = '0';
+    }
+  }
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+})();
+</script>
