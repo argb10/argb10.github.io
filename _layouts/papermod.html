@@ -13,7 +13,9 @@
     {% if page.profile %}
     <div class="profile">
       <div class="profile_inner">
-        <img draggable="false" src="{{ site.author.avatar | relative_url }}" alt="profile" height="150" width="150">
+        <div class="profile-img-wrap">
+          <img draggable="false" src="{{ site.author.avatar | relative_url }}" alt="profile" height="150" width="150">
+        </div>
         <h1>{{ site.author.name }}</h1>
         {% if site.papermod_subtitle %}
         <h6>{{ site.papermod_subtitle }}</h6>

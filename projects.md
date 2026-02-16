@@ -16,8 +16,6 @@ Ou yeah, let's go with the list:
 * Random bullshit go! HTB, OverTheWire, you name it! And also with horrible writeup!
 C'mon, you can find pretty writeups everywhere, but horrible one? only [here](https://github.com/argb10/CyberSec)!
 
-* A couple of custom CTFs... Because, why not:
-    * https://github.com/argb10/GuadCTF
-    * https://github.com/argb10/Cheshire-Cat
+* A couple of custom CTFs... Because, [why](https://github.com/argb10/GuadCTF) [not](https://github.com/argb10/Cheshire-Cat):
 
 * And last but not least, Do you remember Chomsky? Me [neither](https://github.com/argb10/ChomskyGLC).
