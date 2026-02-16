@@ -85,21 +85,22 @@ ul { padding: 0; margin: 0; list-style: none; }
   align-items: center;
   gap: 10px;
 }
-/* Zoom into profile photo (crop center, same height) */
+/* Profile photo: keep image ratio (1536×2048 portrait) */
 .profile .profile-img-wrap {
   width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  height: 200px;  /* 3:4 same as 1536×2048 */
+  border-radius: 50%;  /* ellipse for portrait */
   overflow: hidden;
   display: inline-block;
   flex-shrink: 0;
+  background: var(--entry);
 }
 .profile .profile-img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 28%;
-  transform: scale(1.4);
+  object-fit: contain;
+  object-position: center;
+  display: block;
 }
 .profile h1 { font-size: 42px; }
 .profile h6 { font-size: 17px; font-weight: 400; color: var(--secondary); margin: 0.25em 0; }
